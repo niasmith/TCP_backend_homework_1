@@ -1,34 +1,31 @@
 const fs = require("fs");
 const inquirer = require ("inquirer");
 const greeting = require ("./greeting");
-// const PasswordPrompt = require("inquirer/lib/prompts/password");
- // // log greeting on userInput page
-console.log(greeting);
-inquirer
-// Prompt the new user to create their new user name
-//   .prompt([
-//     {
-//     name: 'NiaSmith',
-//     message: 'What is your username?',
-//     },
-//   ])
-//   Answer for the user name the new user just entered
-//   .then(answers => {
-//     console.info('Answer:', answers.NiaSmith);
-
-    
-//   });
-
-// const inquirer = require('inquirer');
 
 inquirer
+  .prompt([
     {
-      type: 'password',
-      name: 'secret',
-      message: 'Enter password here',
+      type: "input",
+      message: "What is your user name?",
+      name: "username"
     },
+    {
+      type: "password",
+      message: "What is your password?",
+      name: "password"
+    },
+    {
+      type: "password",
+      message: "Re-enter password to confirm:",
+      name: "confirm"
+    }
   ])
-  .then(answers => {
-    // Logging out the secret defeats the purpose though ;)
-    console.info('Answer:', answers.secret);
+  .then(function(response) {
+
+    if (response.confirm === response.password) {
+      console.log("Welcome!");
+    }
+    else {
+      console.log("Oopsy, try again!");
+    }
   });
