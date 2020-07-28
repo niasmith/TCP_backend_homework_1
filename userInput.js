@@ -2,6 +2,8 @@ const fs = require("fs");
 const inquirer = require ("inquirer");
 const greeting = require ("./greeting");
 
+console.log(greeting);
+
 inquirer
   .prompt([
     {
