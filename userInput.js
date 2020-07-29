@@ -6,6 +6,16 @@ const inquirer = require ("inquirer");
 // connector to allow userInput to call greeting
 const greeting = require ("./greeting");
 
+// fs.readFile("userPassword.txt", "utf8", function(error, data) {
+
+//     if (error) {
+//       return console.log(error);
+//     }
+  
+//     console.log(data);
+  
+//   });
+  
 
 console.log(greeting);
 
@@ -19,7 +29,7 @@ console.log(greeting);
 
         {
         type: "password",
-        message: "What is your password?",
+        message: "Create your password?",
         name: "password"
         },
         {

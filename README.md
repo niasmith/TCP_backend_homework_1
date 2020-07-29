@@ -1,13 +1,13 @@
-As a student I want to create a server that accepts user input 
-in the command line so that I know how to create a server. 
+# As a student I want to create a server that accepts user input in the command line so that I know how to create a server. 
 
-Acceptance Criteria
+## Acceptance Criteria
 
-Given that the user is prompted with a question
-When the user enters a password
-Then the password shall store to a text file
+#### Given that the user is prompted with a question. 
+#### When the user enters a password. 
+#### Then the password shall store to a text file
+#### Validate user password is saved to text file 
 
-Validate user password is saved to text file  --- ## Homework Instructions 
+ ## Homework Instructions 
 
  * Create a `userInput.js` file  * Create a `greeting.js`file * Create a
 `userPassword.txt` file 
