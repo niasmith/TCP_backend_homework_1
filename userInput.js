@@ -16,10 +16,11 @@ const greeting = require ("./greeting");
   
 //   });
   
-
+// Console logged greeting from the greeting.js file 
 console.log(greeting);
 
     inquirer
+    // Questions prompt the user for their input. 
     .prompt([
         {
         type: "input",
@@ -37,7 +38,7 @@ console.log(greeting);
         message: "Re-enter password to confirm",
         name: "confirm"
         },
-        
+     // If the password is correct or incorrect, the responses below will follow. 
     ])
     .then(function(response) {
 
