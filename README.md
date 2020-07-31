@@ -26,3 +26,5 @@
 * Create a `GitHub` repo for your server 
 * Commit to `GitHub` at least five times 
 * Submit `.js` file and `Github` link to Google classroom.
+
+![](spongebog.gif)

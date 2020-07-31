@@ -6,19 +6,10 @@ const inquirer = require ("inquirer");
 // connector to allow userInput to call greeting
 const greeting = require ("./greeting");
 
-// fs.readFile("userPassword.txt", "utf8", function(error, data) {
-
-//     if (error) {
-//       return console.log(error);
-//     }
-  
-//     console.log(data);
-  
-//   });
-  
 // Console logged greeting from the greeting.js file 
 console.log(greeting);
 
+function userQuestion(){
     inquirer
     // Questions prompt the user for their input. 
     .prompt([
@@ -38,14 +29,26 @@ console.log(greeting);
         message: "Re-enter password to confirm",
         name: "confirm"
         },
-     // If the password is correct or incorrect, the responses below will follow. 
-    ])
-    .then(function(response) {
+    ]) 
 
-        if (response.confirm === response.password) {
-        console.log("Welcome!");
+     // If the password is correct or incorrect, the responses below will follow. 
+    .then (function(data) {
+        if (data.password != data.confirm){
+            console.log("Oops,try again!");
+            userQuestion();
+        } else{
+            var fs = require("fs");
+        //Sorting users information entered into userPassword.txt
+            fs.writeFile("./userPassword.txt", data.username + " : "+ data.password ,function(err){
+                if (err){
+                    return console.log(err);
+                } else {
+                    console.log("success!");
+                }
+            }); 
         }
-        else {
-        console.log("Oopsy, try again!");
-        }
-    });
+    })
+}
+
+// Run userQuestion
+userQuestion();
