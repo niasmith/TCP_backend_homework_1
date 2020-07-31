@@ -27,4 +27,8 @@
 * Commit to `GitHub` at least five times 
 * Submit `.js` file and `Github` link to Google classroom.
 
+![](confused.gif)
+
+![](node-js.gif)
+
 ![](spongebog.gif)
