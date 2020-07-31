@@ -2,12 +2,12 @@
 
 ## Acceptance Criteria
 
-#### Given that the user is prompted with a question. 
-#### When the user enters a password. 
-#### Then the password shall store to a text file
-#### Validate user password is saved to text file 
+### Given that the user is prompted with a question. 
+### When the user enters a password. 
+### Then the password shall store to a text file
+### Validate user password is saved to text file 
 
- ## Homework Instructions 
+## Homework Instructions 
 
 * Create a `userInput.js` file
 * Create a `greeting.js`file 
