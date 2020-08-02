@@ -31,4 +31,4 @@
 
 ![](node-js.gif)
 
-![](spongebog.gif)
+![](spongebob.gif)
